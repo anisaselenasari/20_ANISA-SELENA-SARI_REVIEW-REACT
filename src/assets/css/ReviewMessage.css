@@ -1,0 +1,90 @@
+:root {
+    --blue: rgba(25, 52, 94, 1);
+    --orange: rgba(244, 117, 34, 1);
+  }
+  
+  header {
+    min-height: 70vh;
+    /* background-color: lightpink; */
+  }
+  
+  .box-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: lightgoldenrodyellow; */
+  }
+  
+  .content {
+    color: var(--blue);
+    position: relative;
+    width: 50%;
+    padding: 3rem;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid #ccd7eb;
+    border-radius: 5px;
+  }
+  
+  .field {
+    display: flex;
+    margin-top: 2px;
+    font-size: 1rem;
+  }
+  .v1 {
+    width: 8rem;
+  }
+  .v2 {
+    width: 1rem;
+  }
+  
+  .content p {
+    margin-top: 25px;
+    font-style: italic;
+    font-size: 0.8rem;
+  }
+  
+  hr {
+    width: 45%;
+    margin: 50px auto 0;
+  }
+  
+  .content h4 {
+    font-size: 1.05rem;
+  }
+  .first-h4 {
+    margin-top: 15px;
+  }
+  
+  .btn-getInTouch {
+    margin-top: 12px;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 24px;
+    background-color: var(--orange);
+    border-color: var(--orange) !important;
+    /* border: none; */
+  }
+  .btn-getInTouch:hover {
+    color: var(--orange);
+    background-color: #fff;
+  }
+  
+  .content-graphic {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transform: translate(-50%, -50%);
+  }
+  
+  footer {
+    background-color: rgba(237, 246, 255, 1);
+    min-height: 30vh;
+  }

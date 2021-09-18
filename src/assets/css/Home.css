@@ -1,0 +1,91 @@
+:root {
+    --blue: rgba(25, 52, 94, 1);
+    --orange: rgba(244, 117, 34, 1);
+  }
+  
+  ul li a {
+    color: var(--blue) !important;
+  }
+  ul li a:hover {
+    color: var(--orange) !important;
+  }
+  
+  .header-body {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('../img/bg-img.png');
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .my-img {
+    display: block;
+    width: 90%;
+    border-radius: 50%;
+  }
+  
+  .btn-getInTouch {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 24px;
+    background-color: var(--orange);
+    border-color: var(--orange) !important;
+    /* border: none; */
+  }
+  .btn-getInTouch:hover {
+    color: var(--orange);
+    background-color: #fff;
+  }
+  
+  .deskripsi {
+    color: var(--blue);
+  }
+  h6.deskripsi {
+    font-size: 25px;
+  }
+  h1.deskripsi {
+    font-size: 85px;
+    font-weight: 600;
+  }
+  h4.deskripsi {
+    font-size: 35px;
+    margin-top: 21px;
+    margin-bottom: 32px;
+  }
+  
+  .my-active {
+    color: var(--orange) !important;
+  }
+  
+  @media only screen and (max-width: 756px) {
+    div.col-md-5 {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .my-img {
+      width: 50%;
+    }
+  
+    .deskripsi {
+      text-align: center;
+    }
+  
+    h6.deskripsi {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+    }
+    h1.deskripsi {
+      font-size: 3rem;
+    }
+    h4.deskripsi {
+      font-size: 2rem;
+    }
+    .container-my-button {
+      display: flex;
+      justify-content: center;
+    }
+  }
