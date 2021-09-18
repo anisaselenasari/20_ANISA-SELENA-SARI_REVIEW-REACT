@@ -1,3 +1,15 @@
+import React from 'react'
+
+function ContactUs() {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default ContactUs
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
