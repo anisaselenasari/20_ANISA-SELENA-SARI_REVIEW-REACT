@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import logoAlta from '../../assets/img/logo-ALTA.png'
+import logoAlta from '../assets/img/logo-ALTA.png'
 
 export default function Navbar() {
   return (
@@ -42,7 +42,7 @@ export default function Navbar() {
             <li className="nav-item px-2">
               <NavLink
                 exact
-                to="/news"
+                to="/News"
                 className="nav-link"
                 activeClassName="my-active"
                 aria-current="page"
@@ -53,7 +53,7 @@ export default function Navbar() {
             <li className="nav-item px-2">
               <NavLink
                 exact
-                to="/contact-us"
+                to="/ContactUs"
                 className="nav-link contact-us"
                 activeClassName="my-active"
                 aria-current="page"

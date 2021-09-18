@@ -20,7 +20,7 @@ ul li a:hover {
 .header-body {
   position: relative;
   min-height: 100vh;
-  background-image: url('../img/bg-img.png');
+  background-image: url('../img/background.png');
   background-repeat: no-repeat;
   /* background-position: center; */
   background-size: cover;

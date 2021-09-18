@@ -1,10 +1,10 @@
 import React from 'react'
 import useClock from '../hooks/useClock'
 import { NavLink } from 'react-router-dom'
-
 import Navbar from '../Navbar/Navbar'
-import model from '../../assets/img/matthew-hamilton-tNCH0sKSZbA-unsplash (1).jpg'
-import '../../assets/css/Home.css'
+
+import model from '../assets/img/matthew-hamilton-tNCH0sKSZbA-unsplash (1).jpg'
+import '../assets/css/Home.css'
 
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
               <h1 className="deskripsi">Anne Sullivian</h1>
               <h4 className="deskripsi">I Build things for the web</h4>
               <div className="container-my-button">
-                <NavLink to="/contact-us">
+                <NavLink to="/ContactUs">
                   <button
                     type="button"
                     className="btn btn-primary btn-lg btn-getInTouch"

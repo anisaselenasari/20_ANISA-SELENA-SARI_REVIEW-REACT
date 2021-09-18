@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-import imgDot from '../assets/img/img.dot.png'
+import imgDot from '../assets/img/img-dot.png'
 import '../assets/css/ReviewMessage.css'
 
 

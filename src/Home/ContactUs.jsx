@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { changed, reset, touched, findAllInvalid } from '../../store/contact'
+import { changed, reset, touched, findAllInvalid } from '../store/contact'
 import { useHistory } from 'react-router-dom'
 
-import '../../assets/css/contactus.css'
-import poster from '../../assets/img/bgrn.jpg'
-import logo from '../../assets/img/logo-ALTA-v2.png'
+import '../assets/css/ContactUs.css'
+// import '../../assets/css/contactus.css'
+import poster from '../assets/img/bgrn.jpg'
+import logo from '../assets/img/logo-ALTA-v2.png'
 
 export default function ContactUs() {
   const contact = useSelector((state) => state.contact)
@@ -36,7 +37,7 @@ export default function ContactUs() {
     }
 
     !isValid && alert('Form tidak valid!')
-    isValid ? history.push('/review-message') : dispatch(findAllInvalid())
+    isValid ? history.push('/ReviewMessage') : dispatch(findAllInvalid())
   }
 
   // * useEffect ini akan dijalankan 1x saja
@@ -170,6 +171,7 @@ export default function ContactUs() {
               placeholder="Enter your message here..."
             ></textarea>
           </div>
+      
 
           <div className="container-my-button">
             <button
@@ -179,7 +181,9 @@ export default function ContactUs() {
             >
               Submit
             </button>
+
           </div>
+         
         </form>
       </div>
     </main>
