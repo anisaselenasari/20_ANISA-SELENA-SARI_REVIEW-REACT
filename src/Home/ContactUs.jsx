@@ -3,8 +3,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { changed, reset, touched, findAllInvalid } from '../../store/contact'
 import { useHistory } from 'react-router-dom'
 
-import '../../assets/css/contact_us.css'
-import poster from '../../assets/img/charles-rRWiVQzLm7k-unsplash.jpg'
+import '../../assets/css/contactus.css'
+import poster from '../../assets/img/bgrn.jpg'
 import logo from '../../assets/img/logo-ALTA-v2.png'
 
 export default function ContactUs() {
@@ -35,11 +35,11 @@ export default function ContactUs() {
       }
     }
 
-    !isValid && alert('Form tidak valid! Pastikan field terisi dengan benar')
+    !isValid && alert('Form tidak valid!')
     isValid ? history.push('/review-message') : dispatch(findAllInvalid())
   }
 
-  // * useEffect dijalanin nya sekali aja
+  // * useEffect ini akan dijalankan 1x saja
   
   useEffect(() => {
     dispatch(reset())

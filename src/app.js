@@ -1,8 +1,8 @@
 import { Switch, Route } from 'react-router-dom'
 
-import Home from './Home/Home'
-import ContactUs from './Home/ContactUs'
-import ReviewMessage from './Home/ReviewMessage'
+import Home from './home/Home'
+import ContactUs from './home/ContactUs'
+import ReviewMessage from './home/ReviewMessage'
 
 
 function App() {
