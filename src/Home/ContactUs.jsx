@@ -9,22 +9,24 @@ import poster from '../assets/img/bgrn.jpg'
 import logo from '../assets/img/logo-ALTA-v2.png'
 
 export default function ContactUs() {
-  const contact = useSelector((state) => state.contact)
-  const dispatch = useDispatch()
-  const history = useHistory()
+  const contact = useSelector((state) => state.contact) //untuk mengambil status dan mengembalikan data apapun yang diinginkan
+  const dispatch = useDispatch() //mengirimkan data ke peredam jadi kek pengeditan gtu dan di usedispatch ini kita menggunakan payload.payload adalah string
+  // jadi intinya tuh useselector dan usedispatch saling berkaitan, jadi kita mengambil data menggunakan useselector, abis itu kita olah
+  // di usedispatch, setelah itu. kita akan mengeluarkan data yang telah dirubah itu dgn use selector lagi
+  const history = useHistory() 
 
-  function formChangedHandler(e) {
-    const { name, value } = e.target
+  function formChangedHandler(e) {        //untuk perubahan formulir atau pengeditan formulir
+    const { name, value } = e.target     // tidah akan terhubung kemana mana 
     dispatch(changed({ name, value }))
   }
 
-  function touchedHandler(e) {
+  function touchedHandler(e) {      // disini ketika kita klik maka dia akan jalan 
     const { name } = e.target
     dispatch(touched({ name }))
   }
 
-  function submitHandler(e) {
-    e.preventDefault()
+  function submitHandler(e) {    // disini adalah untuk submit, ketika dia sudah sesuai dia akan lanjut.nah tapi ketika dia 
+    e.preventDefault()           // gak sesuai dia akan munculin tulisan erornya
     let isValid = true
 
     for (const field in contact) {
@@ -36,8 +38,11 @@ export default function ContactUs() {
       }
     }
 
-    !isValid && alert('Form tidak valid!')
-    isValid ? history.push('/ReviewMessage') : dispatch(findAllInvalid())
+    !isValid && alert('Form tidak valid!') // jika formulir tidak sesuai dengan yang udah kita setting, dia akan keluar alert 
+    // punya hubungan sama baris ke 33 dan 34
+    isValid ? history.push('/ReviewMessage') : dispatch(findAllInvalid()) // jika formulir sudah sesuai dengan yg kita setting dia akan 
+    // mengeluarkan data telah kita masukkan di contact us, akan terhubung di revies
+    //hubungannya dengan baris 27 dan 28
   }
 
   // * useEffect ini akan dijalankan 1x saja
@@ -47,7 +52,8 @@ export default function ContactUs() {
   }, [dispatch])
 
   return (
-    <main>
+    <main> 
+      {/* baris 55 sampe 61 itu gambar */}
       <div className="container-content-image">
         <img className="content-image bg-img" src={poster} alt="poster" />
         <div className="content-image backrop-img"></div>
@@ -64,23 +70,23 @@ export default function ContactUs() {
             </label>
             <input
               value={contact.fullname.value}
-              onChange={formChangedHandler}
-              onFocus={touchedHandler}
+              onChange={formChangedHandler}    //menjalankan baris 18
+              onFocus={touchedHandler}          // menjalankan baris 23
               name="fullname"
               id="fullname"
               type="text"
-              className={`${
+              className={`${                      // dibaris ini ketika nama yang kita buat sudah sesuai dia gak akan mengeluarkan apapun
                 contact.fullname.err && contact.fullname.touched
-                  ? 'errField'
-                  : ''
+                  ? 'errField'            // dibaris ini ada hubungan dengan file contact.js.. karna kita seetting dia disana
+                  : ''  // nah kalo gak sesuai dia akan mengeluarkan eror
               } form-control form-control-sm`}
               placeholder="Your full name here..."
             />
             <p
               className={`${
                 contact.fullname.err && contact.fullname.touched
-                  ? 'show'
-                  : 'hide'
+                  ? 'show'  // nah dia akan nampilin kalo dia eror
+                  : 'hide' // nah kalo udh bener dia di hide
               } errMessage`}
             >
               {contact.fullname.errMessage}
@@ -175,7 +181,7 @@ export default function ContactUs() {
 
           <div className="container-my-button">
             <button
-              onClick={submitHandler}
+              onClick={submitHandler}    // ini hubungannya sama baris ke  28
               type="submit"
               className="btn my-button"
             >

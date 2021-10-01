@@ -8,10 +8,11 @@ import '../assets/css/Home.css'
 
 
 export default function Home() {
-  const timestamp = useClock()
+  const timestamp = useClock() //// untuk menampilkan jam yang kita buat yang namanya tuh useclock
   return (
     <div id="my-content">
-      <Navbar />
+      <Navbar /> 
+      {/* buat naro navbar yang udh kita buat di navbar.jsx */}
 
       <div className="header-body d-flex justify-content-center ">
         <div className="container mt-1">

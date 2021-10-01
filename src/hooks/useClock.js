@@ -4,7 +4,7 @@ export default function useClock() {
   const [clock, setClock] = useState(() => getTimeStamp())
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const interval = setInterval(() => {  // biar jamnya bisa jalan trus, dikasih angka 1000 karna biar dia ngeupdate trus
       setClock(getTimeStamp())
     }, 1000)
 
